@@ -82,7 +82,7 @@ Deployment configuration is defined in [`wrangler.jsonc`](wrangler.jsonc), bindi
 | **Notes Instance** | [notes.bunkernet.cc](https://notes.bunkernet.cc)                               |
 | **GitHub**         | [@0xM4lik](https://github.com/0xM4lik)                                         |
 | **Matrix**         | [`@malik:matrix.bunkernet.cc`](https://matrix.to/#/@malik:matrix.bunkernet.cc) |
-| **HackTheBox**     | [Janik on HTB](https://app.hackthebox.com/users/1464597)                       |
+| **HackTheBox**     | [0xM4lik on HTB](https://app.hackthebox.com/users/1464597)                       |
 
 ---
 

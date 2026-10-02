@@ -1,3 +1,11 @@
+---
+title: "Apple Pwnbox (Mac Mini 2009)"
+tags:
+  - projects
+  - hardware
+description: "Transforming a 2009 Apple Mac Mini into a self-hosted NoVNC Pwnbox server using Debian and Parrot OS conversion."
+---
+
 In this project I wanted to turn my apple mac mini into a pwnbox server using NoVNC. I also wanted to mimic the looks of the pwnbox using their mate config. Luckily Parrot provides a pwnbox image that already has the config, they also provide a Debian conversion script that contains the pwnbox config as well.
 # Installing Parrot on mac
 - ❌ **Failed Attempts:**

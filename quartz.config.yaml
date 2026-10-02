@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: "notes.bunkernet.cc"
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -21,25 +21,25 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#f6f8fa"
+        lightgray: "#eaeef2"
+        gray: "#d0d7de"
+        darkgray: "#1f2328"
+        dark: "#0969da"
+        secondary: "#0969da"
+        tertiary: "#0550ae"
+        highlight: rgba(9, 105, 218, 0.12)
+        textHighlight: rgba(9, 105, 218, 0.22)
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#0d1117"
+        lightgray: "#161b22"
+        gray: "#30363d"
+        darkgray: "#e6edf3"
+        dark: "#ffffff"
+        secondary: "#58a6ff"
+        tertiary: "#79c0ff"
+        highlight: rgba(88, 166, 255, 0.15)
+        textHighlight: rgba(88, 166, 255, 0.25)
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -100,11 +100,6 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
-  - source: "@quartz-themes/core"
-    enabled: false
-    options:
-      theme: tokyo-night
-      mode: both
   - source: "@quartz-community/remove-draft"
     enabled: true
   - source: "@quartz-community/explicit-publish"
@@ -176,7 +171,7 @@ plugins:
       position: beforeBody
       priority: 20
   - source: "@quartz-community/tag-list"
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
       priority: 30
@@ -226,8 +221,11 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        "bunkernet.cc": https://bunkernet.cc
+        "GitHub": https://github.com/0xM4lik
+        "Matrix": https://matrix.to/#/@malik:matrix.bunkernet.cc
+        "HackTheBox": https://app.hackthebox.com/users/1464597
+        "Contact": mailto:janik@bunkernet.cc
     layout:
       position: footer
       priority: 50

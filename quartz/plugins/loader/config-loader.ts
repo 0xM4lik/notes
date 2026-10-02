@@ -31,6 +31,7 @@ import Flex from "../../components/Flex"
 import MobileOnly from "../../components/MobileOnly"
 import DesktopOnly from "../../components/DesktopOnly"
 import ConditionalRender from "../../components/ConditionalRender"
+import ThemePicker from "../../components/ThemePicker"
 
 const CONFIG_YAML_PATH = path.join(process.cwd(), "quartz.config.yaml")
 const DEFAULT_CONFIG_YAML_PATH = path.join(process.cwd(), "quartz.config.default.yaml")
@@ -741,6 +742,14 @@ export function buildLayoutForEntries(
     afterBody: [],
     footer: [],
   }
+
+  const darkmodeSource = componentRegistry.get("darkmode")?.source ?? "quartz"
+  componentRegistry.register("darkmode", ThemePicker, darkmodeSource)
+  componentRegistry.register("Darkmode", ThemePicker, darkmodeSource)
+  componentRegistry.register("@quartz-community/darkmode", ThemePicker, darkmodeSource)
+  componentRegistry.register("@quartz-community/darkmode/Darkmode", ThemePicker, darkmodeSource)
+  componentRegistry.register("theme-picker", ThemePicker, darkmodeSource)
+  componentRegistry.register("ThemePicker", ThemePicker, darkmodeSource)
 
   for (const entry of entries) {
     if (!entry.layout) continue

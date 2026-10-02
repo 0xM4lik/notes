@@ -1,17 +1,167 @@
+// Default syntax highlighting colors (for light theme)
 code[data-theme*=" "] {
   color: var(--shiki-light);
-  background-color: var(--shiki-light-bg);
+  background-color: transparent;
 }
 
 code[data-theme*=" "] span {
   color: var(--shiki-light);
 }
 
-[saved-theme="dark"] code[data-theme*=" "] {
+// All dark themes (anything except light) use Shiki dark tokens as baseline
+:root:not([saved-theme="light"]):not([data-theme="light"]) code[data-theme*=" "],
+:root[data-theme="dark"] code[data-theme*=" "],
+:root[saved-theme="dark"] code[data-theme*=" "],
+:root[data-theme="matrix"] code[data-theme*=" "],
+:root[saved-theme="matrix"] code[data-theme*=" "],
+:root[data-theme="ocean"] code[data-theme*=" "],
+:root[saved-theme="ocean"] code[data-theme*=" "],
+:root[data-theme="dracula"] code[data-theme*=" "],
+:root[saved-theme="dracula"] code[data-theme*=" "],
+:root[data-theme="nord"] code[data-theme*=" "],
+:root[saved-theme="nord"] code[data-theme*=" "],
+:root[data-theme="amber"] code[data-theme*=" "],
+:root[saved-theme="amber"] code[data-theme*=" "],
+:root[data-theme="tokyo-night"] code[data-theme*=" "],
+:root[saved-theme="tokyo-night"] code[data-theme*=" "],
+:root[data-theme="gruvbox"] code[data-theme*=" "],
+:root[saved-theme="gruvbox"] code[data-theme*=" "],
+:root[data-theme="catppuccin"] code[data-theme*=" "],
+:root[saved-theme="catppuccin"] code[data-theme*=" "],
+:root[data-theme="monokai"] code[data-theme*=" "],
+:root[saved-theme="monokai"] code[data-theme*=" "] {
   color: var(--shiki-dark);
-  background-color: var(--shiki-dark-bg);
+  background-color: transparent;
 }
 
-[saved-theme="dark"] code[data-theme*=" "] span {
+:root:not([saved-theme="light"]):not([data-theme="light"]) code[data-theme*=" "] span,
+:root[data-theme="dark"] code[data-theme*=" "] span,
+:root[saved-theme="dark"] code[data-theme*=" "] span,
+:root[data-theme="matrix"] code[data-theme*=" "] span,
+:root[saved-theme="matrix"] code[data-theme*=" "] span,
+:root[data-theme="ocean"] code[data-theme*=" "] span,
+:root[saved-theme="ocean"] code[data-theme*=" "] span,
+:root[data-theme="dracula"] code[data-theme*=" "] span,
+:root[saved-theme="dracula"] code[data-theme*=" "] span,
+:root[data-theme="nord"] code[data-theme*=" "] span,
+:root[saved-theme="nord"] code[data-theme*=" "] span,
+:root[data-theme="amber"] code[data-theme*=" "] span,
+:root[saved-theme="amber"] code[data-theme*=" "] span,
+:root[data-theme="tokyo-night"] code[data-theme*=" "] span,
+:root[saved-theme="tokyo-night"] code[data-theme*=" "] span,
+:root[data-theme="gruvbox"] code[data-theme*=" "] span,
+:root[saved-theme="gruvbox"] code[data-theme*=" "] span,
+:root[data-theme="catppuccin"] code[data-theme*=" "] span,
+:root[saved-theme="catppuccin"] code[data-theme*=" "] span,
+:root[data-theme="monokai"] code[data-theme*=" "] span,
+:root[saved-theme="monokai"] code[data-theme*=" "] span {
   color: var(--shiki-dark);
+}
+
+// Line number styling
+pre > code > [data-line]::before {
+  color: var(--code-linenumber, rgba(115, 138, 148, 0.6)) !important;
+}
+
+// -----------------------------------------------------------------------------
+// THEME-SPECIFIC SYNTAX TOKEN CUSTOMIZATIONS
+// -----------------------------------------------------------------------------
+
+// MATRIX: Cyberpunk Phosphor Green Palette
+:root[data-theme="matrix"], :root[saved-theme="matrix"] {
+  code[data-theme*=" "] span[data-token-type="keyword"] { color: #4dff9e !important; font-weight: 600; }
+  code[data-theme*=" "] span[data-token-type="function"] { color: #38ef7d !important; }
+  code[data-theme*=" "] span[data-token-type="string"] { color: #80ffb8 !important; }
+  code[data-theme*=" "] span[data-token-type="value"] { color: #00f0ff !important; }
+  code[data-theme*=" "] span[data-token-type="comment"] { color: #52996d !important; font-style: italic; }
+  code[data-theme*=" "] span[data-token-type="operator"] { color: #4dff9e !important; }
+  code[data-theme*=" "] span[data-token-type="property"] { color: #b3ffd6 !important; }
+}
+
+// OCEAN: Vivid Cyan & Amber Palette
+:root[data-theme="ocean"], :root[saved-theme="ocean"] {
+  code[data-theme*=" "] span[data-token-type="keyword"] { color: #00f0ff !important; font-weight: 600; }
+  code[data-theme*=" "] span[data-token-type="function"] { color: #38bdf8 !important; }
+  code[data-theme*=" "] span[data-token-type="string"] { color: #80f7ff !important; }
+  code[data-theme*=" "] span[data-token-type="value"] { color: #ff9d00 !important; }
+  code[data-theme*=" "] span[data-token-type="comment"] { color: #5f8d9e !important; font-style: italic; }
+  code[data-theme*=" "] span[data-token-type="operator"] { color: #ff9d00 !important; }
+  code[data-theme*=" "] span[data-token-type="property"] { color: #7dd3fc !important; }
+}
+
+// DRACULA: Official Dracula Syntax Palette
+:root[data-theme="dracula"], :root[saved-theme="dracula"] {
+  code[data-theme*=" "] span[data-token-type="keyword"] { color: #ff79c6 !important; font-weight: 600; }
+  code[data-theme*=" "] span[data-token-type="function"] { color: #50fa7b !important; }
+  code[data-theme*=" "] span[data-token-type="string"] { color: #f1fa8c !important; }
+  code[data-theme*=" "] span[data-token-type="value"] { color: #bd93f9 !important; }
+  code[data-theme*=" "] span[data-token-type="comment"] { color: #6272a4 !important; font-style: italic; }
+  code[data-theme*=" "] span[data-token-type="property"] { color: #8be9fd !important; }
+  code[data-theme*=" "] span[data-token-type="operator"] { color: #ff79c6 !important; }
+}
+
+// NORD: Arctic Frost & Aurora Palette
+:root[data-theme="nord"], :root[saved-theme="nord"] {
+  code[data-theme*=" "] span[data-token-type="keyword"] { color: #81a1c1 !important; font-weight: 600; }
+  code[data-theme*=" "] span[data-token-type="function"] { color: #88c0d0 !important; }
+  code[data-theme*=" "] span[data-token-type="string"] { color: #a3be8c !important; }
+  code[data-theme*=" "] span[data-token-type="value"] { color: #b48ead !important; }
+  code[data-theme*=" "] span[data-token-type="comment"] { color: #616e88 !important; font-style: italic; }
+  code[data-theme*=" "] span[data-token-type="operator"] { color: #81a1c1 !important; }
+  code[data-theme*=" "] span[data-token-type="property"] { color: #d8dee9 !important; }
+}
+
+// AMBER: Retro CRT Monochromatic Amber
+:root[data-theme="amber"], :root[saved-theme="amber"] {
+  code[data-theme*=" "] span[data-token-type="keyword"] { color: #ffb000 !important; font-weight: 600; }
+  code[data-theme*=" "] span[data-token-type="function"] { color: #ffa726 !important; }
+  code[data-theme*=" "] span[data-token-type="string"] { color: #ffd54f !important; }
+  code[data-theme*=" "] span[data-token-type="value"] { color: #ff7043 !important; }
+  code[data-theme*=" "] span[data-token-type="comment"] { color: #8c6628 !important; font-style: italic; }
+  code[data-theme*=" "] span[data-token-type="operator"] { color: #ffb000 !important; }
+  code[data-theme*=" "] span[data-token-type="property"] { color: #ffeec2 !important; }
+}
+
+// TOKYO NIGHT: Vibrant Neon Tokyo Night Palette
+:root[data-theme="tokyo-night"], :root[saved-theme="tokyo-night"] {
+  code[data-theme*=" "] span[data-token-type="keyword"] { color: #bb9af7 !important; font-weight: 600; }
+  code[data-theme*=" "] span[data-token-type="function"] { color: #7aa2f7 !important; }
+  code[data-theme*=" "] span[data-token-type="string"] { color: #9ece6a !important; }
+  code[data-theme*=" "] span[data-token-type="value"] { color: #ff9e64 !important; }
+  code[data-theme*=" "] span[data-token-type="comment"] { color: #565f89 !important; font-style: italic; }
+  code[data-theme*=" "] span[data-token-type="operator"] { color: #89ddff !important; }
+  code[data-theme*=" "] span[data-token-type="property"] { color: #7dcfff !important; }
+}
+
+// GRUVBOX: Retro Warm Earth Tones
+:root[data-theme="gruvbox"], :root[saved-theme="gruvbox"] {
+  code[data-theme*=" "] span[data-token-type="keyword"] { color: #fb4934 !important; font-weight: 600; }
+  code[data-theme*=" "] span[data-token-type="function"] { color: #fabd2f !important; }
+  code[data-theme*=" "] span[data-token-type="string"] { color: #b8bb26 !important; }
+  code[data-theme*=" "] span[data-token-type="value"] { color: #d3869b !important; }
+  code[data-theme*=" "] span[data-token-type="comment"] { color: #928374 !important; font-style: italic; }
+  code[data-theme*=" "] span[data-token-type="operator"] { color: #fe8019 !important; }
+  code[data-theme*=" "] span[data-token-type="property"] { color: #8ec07c !important; }
+}
+
+// CATPPUCCIN: Soothing Pastel Mocha Palette
+:root[data-theme="catppuccin"], :root[saved-theme="catppuccin"] {
+  code[data-theme*=" "] span[data-token-type="keyword"] { color: #cba6f7 !important; font-weight: 600; }
+  code[data-theme*=" "] span[data-token-type="function"] { color: #89b4fa !important; }
+  code[data-theme*=" "] span[data-token-type="string"] { color: #a6e3a1 !important; }
+  code[data-theme*=" "] span[data-token-type="value"] { color: #fab387 !important; }
+  code[data-theme*=" "] span[data-token-type="comment"] { color: #6c7086 !important; font-style: italic; }
+  code[data-theme*=" "] span[data-token-type="operator"] { color: #89dceb !important; }
+  code[data-theme*=" "] span[data-token-type="property"] { color: #f5c2e7 !important; }
+}
+
+// MONOKAI: High-Contrast Monokai Neon
+:root[data-theme="monokai"], :root[saved-theme="monokai"] {
+  code[data-theme*=" "] span[data-token-type="keyword"] { color: #f92672 !important; font-weight: 600; }
+  code[data-theme*=" "] span[data-token-type="function"] { color: #a6e22e !important; }
+  code[data-theme*=" "] span[data-token-type="string"] { color: #e6db74 !important; }
+  code[data-theme*=" "] span[data-token-type="value"] { color: #ae81ff !important; }
+  code[data-theme*=" "] span[data-token-type="comment"] { color: #75715e !important; font-style: italic; }
+  code[data-theme*=" "] span[data-token-type="operator"] { color: #f92672 !important; }
+  code[data-theme*=" "] span[data-token-type="property"] { color: #66d9ef !important; }
 }

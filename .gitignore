@@ -12,3 +12,14 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+
+# AI and Agent files
+.agents/
+skills-lock.json
+.gemini/
+.claude/
+.cursor/
+.cursorrules
+.windsurfrules
+.aider*
+.continue/

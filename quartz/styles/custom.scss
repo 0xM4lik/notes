@@ -1,3 +1,466 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+/* ==========================================================================
+   Bunkernet 11-Theme System for Quartz
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   THEME 1: DARK (GitHub / Bunkernet Dark)
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"],
+:root[saved-theme="dark"] {
+  --light: #0d1117;
+  --lightgray: #161b22;
+  --gray: #30363d;
+  --darkgray: #e6edf3;
+  --dark: #ffffff;
+  --secondary: #58a6ff;
+  --tertiary: #79c0ff;
+  --highlight: rgba(88, 166, 255, 0.15);
+  --textHighlight: rgba(88, 166, 255, 0.25);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #848d97;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #161b22;
+  --code-border: #30363d;
+  --code-text: #e6edf3;
+  --code-linenumber: #6e7681;
+  --inline-code-bg: #161b22;
+  --inline-code-text: #58a6ff;
+  --inline-code-border: #30363d;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 2: LIGHT (Clean High-Contrast Light)
+   -------------------------------------------------------------------------- */
+:root[data-theme="light"],
+:root[saved-theme="light"] {
+  --light: #f6f8fa;
+  --lightgray: #eaeef2;
+  --gray: #d0d7de;
+  --darkgray: #1f2328;
+  --dark: #0969da;
+  --secondary: #0969da;
+  --tertiary: #0550ae;
+  --highlight: rgba(9, 105, 218, 0.12);
+  --textHighlight: rgba(9, 105, 218, 0.22);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #656d76;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: light;
+
+  --code-bg: #f6f8fa;
+  --code-border: #d0d7de;
+  --code-text: #1f2328;
+  --code-linenumber: #8c959f;
+  --inline-code-bg: #eaeef2;
+  --inline-code-text: #0969da;
+  --inline-code-border: #d0d7de;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 3: MATRIX (Cyberpunk Green CRT Phosphor Terminal)
+   -------------------------------------------------------------------------- */
+:root[data-theme="matrix"],
+:root[saved-theme="matrix"] {
+  --light: #000000;
+  --lightgray: #0b150e;
+  --gray: #1a3822;
+  --darkgray: #d6ffe6;
+  --dark: #4dff9e;
+  --secondary: #4dff9e;
+  --tertiary: #7ab0ff;
+  --highlight: rgba(77, 255, 158, 0.15);
+  --textHighlight: rgba(77, 255, 158, 0.28);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #7da38d;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #07130a;
+  --code-border: rgba(77, 255, 158, 0.25);
+  --code-text: #d6ffe6;
+  --code-linenumber: #2d663e;
+  --inline-code-bg: #0b1c10;
+  --inline-code-text: #4dff9e;
+  --inline-code-border: rgba(77, 255, 158, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   THEME 4: OCEAN (Deep Oceanic Cyan & Amber)
+   -------------------------------------------------------------------------- */
+:root[data-theme="ocean"],
+:root[saved-theme="ocean"] {
+  --light: #010a14;
+  --lightgray: #041628;
+  --gray: #0e304f;
+  --darkgray: #e0faff;
+  --dark: #00f0ff;
+  --secondary: #00f0ff;
+  --tertiary: #ff9d00;
+  --highlight: rgba(0, 240, 255, 0.15);
+  --textHighlight: rgba(0, 240, 255, 0.28);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #5f8d9e;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #041628;
+  --code-border: rgba(0, 240, 255, 0.25);
+  --code-text: #e0faff;
+  --code-linenumber: #345e78;
+  --inline-code-bg: #07223d;
+  --inline-code-text: #00f0ff;
+  --inline-code-border: rgba(0, 240, 255, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   THEME 5: DRACULA (Gothic Dark Purple & Pink)
+   -------------------------------------------------------------------------- */
+:root[data-theme="dracula"],
+:root[saved-theme="dracula"] {
+  --light: #1e1f29;
+  --lightgray: #282a36;
+  --gray: #44475a;
+  --darkgray: #f8f8f2;
+  --dark: #ffffff;
+  --secondary: #bd93f9;
+  --tertiary: #ff79c6;
+  --highlight: rgba(189, 147, 249, 0.18);
+  --textHighlight: rgba(255, 121, 198, 0.25);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #6272a4;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #282a36;
+  --code-border: #44475a;
+  --code-text: #f8f8f2;
+  --code-linenumber: #6272a4;
+  --inline-code-bg: #282a36;
+  --inline-code-text: #ff79c6;
+  --inline-code-border: #44475a;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 6: NORD (Arctic Scandinavian Frost)
+   -------------------------------------------------------------------------- */
+:root[data-theme="nord"],
+:root[saved-theme="nord"] {
+  --light: #242933;
+  --lightgray: #2e3440;
+  --gray: #434c5e;
+  --darkgray: #eceff4;
+  --dark: #ffffff;
+  --secondary: #88c0d0;
+  --tertiary: #81a1c1;
+  --highlight: rgba(136, 192, 208, 0.18);
+  --textHighlight: rgba(136, 192, 208, 0.28);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #7b88a1;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #2e3440;
+  --code-border: #434c5e;
+  --code-text: #eceff4;
+  --code-linenumber: #616e88;
+  --inline-code-bg: #2e3440;
+  --inline-code-text: #88c0d0;
+  --inline-code-border: #434c5e;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 7: AMBER (Retro CRT Monochromatic Amber)
+   -------------------------------------------------------------------------- */
+:root[data-theme="amber"],
+:root[saved-theme="amber"] {
+  --light: #070502;
+  --lightgray: #160f04;
+  --gray: #2e1e07;
+  --darkgray: #ffeec2;
+  --dark: #ffb000;
+  --secondary: #ffb000;
+  --tertiary: #ff7700;
+  --highlight: rgba(255, 176, 0, 0.16);
+  --textHighlight: rgba(255, 176, 0, 0.28);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #b58c5c;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #120b02;
+  --code-border: rgba(255, 176, 0, 0.3);
+  --code-text: #ffeec2;
+  --code-linenumber: #7a5416;
+  --inline-code-bg: #1c1305;
+  --inline-code-text: #ffb000;
+  --inline-code-border: rgba(255, 176, 0, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   THEME 8: TOKYO NIGHT (Vibrant Cyberpunk Blue & Magenta)
+   -------------------------------------------------------------------------- */
+:root[data-theme="tokyo-night"],
+:root[saved-theme="tokyo-night"] {
+  --light: #13141f;
+  --lightgray: #1a1b26;
+  --gray: #292e42;
+  --darkgray: #c0caf5;
+  --dark: #ffffff;
+  --secondary: #7aa2f7;
+  --tertiary: #bb9af7;
+  --highlight: rgba(122, 162, 247, 0.18);
+  --textHighlight: rgba(187, 154, 247, 0.25);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #565f89;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #1a1b26;
+  --code-border: #292e42;
+  --code-text: #c0caf5;
+  --code-linenumber: #565f89;
+  --inline-code-bg: #1a1b26;
+  --inline-code-text: #7aa2f7;
+  --inline-code-border: #292e42;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 9: GRUVBOX (Retro Warm Groove Palette)
+   -------------------------------------------------------------------------- */
+:root[data-theme="gruvbox"],
+:root[saved-theme="gruvbox"] {
+  --light: #1d2021;
+  --lightgray: #282828;
+  --gray: #3c3836;
+  --darkgray: #ebdbb2;
+  --dark: #fbf1c7;
+  --secondary: #fabd2f;
+  --tertiary: #fe8019;
+  --highlight: rgba(250, 189, 47, 0.16);
+  --textHighlight: rgba(254, 128, 25, 0.26);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #928374;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #282828;
+  --code-border: #3c3836;
+  --code-text: #ebdbb2;
+  --code-linenumber: #7c6f64;
+  --inline-code-bg: #282828;
+  --inline-code-text: #fabd2f;
+  --inline-code-border: #3c3836;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 10: CATPPUCCIN (Soothing Warm Pastel Palette)
+   -------------------------------------------------------------------------- */
+:root[data-theme="catppuccin"],
+:root[saved-theme="catppuccin"] {
+  --light: #11111b;
+  --lightgray: #1e1e2e;
+  --gray: #313244;
+  --darkgray: #cdd6f4;
+  --dark: #ffffff;
+  --secondary: #cba6f7;
+  --tertiary: #89dceb;
+  --highlight: rgba(203, 166, 247, 0.18);
+  --textHighlight: rgba(137, 220, 235, 0.25);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #6c7086;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #1e1e2e;
+  --code-border: #313244;
+  --code-text: #cdd6f4;
+  --code-linenumber: #6c7086;
+  --inline-code-bg: #1e1e2e;
+  --inline-code-text: #cba6f7;
+  --inline-code-border: #313244;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 11: MONOKAI (Classic Pro Hacker High-Contrast Neon)
+   -------------------------------------------------------------------------- */
+:root[data-theme="monokai"],
+:root[saved-theme="monokai"] {
+  --light: #1e1f1c;
+  --lightgray: #272822;
+  --gray: #3e3d32;
+  --darkgray: #f8f8f2;
+  --dark: #ffffff;
+  --secondary: #a6e22e;
+  --tertiary: #f92672;
+  --highlight: rgba(166, 226, 46, 0.16);
+  --textHighlight: rgba(249, 38, 114, 0.25);
+
+  --background-primary: var(--light);
+  --background-secondary: var(--lightgray);
+  --text-normal: var(--darkgray);
+  --text-muted: #75715e;
+  --text-accent: var(--secondary);
+  --link-color: var(--secondary);
+  --link-color-hover: var(--tertiary);
+  color-scheme: dark;
+
+  --code-bg: #272822;
+  --code-border: #3e3d32;
+  --code-text: #f8f8f2;
+  --code-linenumber: #75715e;
+  --inline-code-bg: #272822;
+  --inline-code-text: #a6e22e;
+  --inline-code-border: #3e3d32;
+}
+
+/* ==========================================================================
+   Global Cyberpunk & UI Elements
+   ========================================================================== */
+
+/* Custom scrollbars matching theme */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lightgray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray);
+}
+
+/* Code block container styling */
+figure[data-rehype-pretty-code-figure] {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+}
+
+pre {
+  background-color: var(--code-bg, var(--lightgray)) !important;
+  border: 1px solid var(--code-border, var(--gray)) !important;
+  border-radius: 8px !important;
+  padding: 0.85rem 1rem !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  overflow-x: auto;
+}
+
+pre > code {
+  color: var(--code-text, var(--darkgray)) !important;
+  font-family: var(--codeFont);
+  line-height: 1.6;
+  font-size: 0.88rem;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+pre > code > [data-line] {
+  padding: 0 0.25rem;
+  box-sizing: border-box;
+}
+
+/* Inline code styling */
+:not(pre) > code {
+  background-color: var(--inline-code-bg, var(--lightgray)) !important;
+  color: var(--inline-code-text, var(--secondary)) !important;
+  border: 1px solid var(--inline-code-border, var(--gray)) !important;
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-family: var(--codeFont);
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+/* Smooth theme transitions */
+body {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Table styling for feature and overview tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--lightgray);
+  text-align: left;
+}
+
+th {
+  background-color: var(--lightgray);
+  color: var(--dark);
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}

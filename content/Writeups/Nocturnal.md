@@ -1,3 +1,11 @@
+---
+title: "HTB: Nocturnal"
+tags:
+  - writeups
+  - htb
+description: "Linux CTF writeup focusing on web enumeration, authentication bypass, and local exploitation."
+---
+
 A classic Linux CTF focusing on web enumeration/exploitation
 
 # Enumeration

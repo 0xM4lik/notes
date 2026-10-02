@@ -1,3 +1,11 @@
+---
+title: "HTB: Archetype"
+tags:
+  - writeups
+  - htb
+description: "HackTheBox Starting Point machine writeup covering SMB enumeration, MS-SQL exploitation, and privilege escalation."
+---
+
 one of the starting point CTF's from HTB *always a great learning opportunity*
 
 # Enumeration
